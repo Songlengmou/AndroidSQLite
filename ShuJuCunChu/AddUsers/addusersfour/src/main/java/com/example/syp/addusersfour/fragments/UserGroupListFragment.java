@@ -32,7 +32,6 @@ public class UserGroupListFragment extends AbstractFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         binding = FragmentUserGroupBinding.inflate(inflater);
         controller = new UserGroupListFragmentController(binding, this);
         binding.setController(controller);
@@ -40,6 +39,7 @@ public class UserGroupListFragment extends AbstractFragment {
         return binding.getRoot();
     }
 
+    //监听返回键
     @Override
     public void onBackToFragment() {
         super.onBackToFragment();
