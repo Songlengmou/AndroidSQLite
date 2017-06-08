@@ -1,0 +1,49 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="controller"
+            type="com.example.syp.addusersfour.controller.EditGroupFragmentController" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="com.example.syp.addusersfour.fragments.EditGroupFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户组名：" />
+
+            <EditText
+                android:id="@+id/groupNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:onClick="@{controller::btnSaveClicked}"
+            android:src="@android:drawable/ic_menu_save" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="16dp"
+            android:onClick="@{controller::btnCancelClicked}"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+    </FrameLayout>
+</layout>
