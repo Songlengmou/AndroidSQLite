@@ -45,18 +45,18 @@ public class DbConnector extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE" + TABLE_NAME_GROUP + "(" +
-                COLUMN_NAME_ID + "INTEGER PRIMARY KEY AUTOINCREMENT," +
-                COLUMN_NAME_NAME + "TEXT NOT NULL DEFAULT \"default group\")");
+        db.execSQL("CREATE TABLE " + TABLE_NAME_GROUP + "(" +
+                COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_NAME_NAME + " TEXT NOT NULL DEFAULT \"default group\")");
 
         initGroupData(db);
 
 
-        db.execSQL("CREATE TABLE" + TABLE_NAME_USER + "(" +
+        db.execSQL("CREATE TABLE " + TABLE_NAME_USER + "(" +
                 COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COLUMN_NAME_NAME + " TEXT NOT NULL DEFAULT NONE," +
                 COLUMN_NAME_AGE + " INTEGER DEFAULT 1," +
-                COLUMN_NAME_GROUP_ID + " INTEGER DEFAULT 1");
+                COLUMN_NAME_GROUP_ID + " INTEGER DEFAULT 1)");
 
 
 //        //v1
